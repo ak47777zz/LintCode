@@ -12,7 +12,7 @@ public class LintCode62 {
      */
     public int search(int[] A, int target) {
 
-        return 0;
+        return 123;
     }
 
 }
