@@ -1,6 +1,7 @@
 package com.algorighms.lintcode;
 
 /**
+ * 单链表生成工厂
  * Created by sunao on 2016/2/17.
  */
 public class OneWayListNodeFactory {
