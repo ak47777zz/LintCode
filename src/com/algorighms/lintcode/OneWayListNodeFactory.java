@@ -6,6 +6,12 @@ package com.algorighms.lintcode;
  */
 public class OneWayListNodeFactory {
 
+    /**
+     * 生成单链表返回头部
+     *
+     * @param args
+     * @return
+     */
     public static ListNode getListNode(int... args) {
         ListNode pre = null;
         ListNode head = null;
@@ -22,10 +28,24 @@ public class OneWayListNodeFactory {
         return head;
     }
 
+    /**
+     * 返回参数链表的尾部
+     *
+     * @param node
+     * @return
+     */
+    public static ListNode getTail(ListNode node) {
+        ListNode tail = node;
+        while (tail.next != null) {
+            tail = tail.next;
+        }
+        return tail;
+    }
+
     public static void print(ListNode node) {
         StringBuilder sb = new StringBuilder();
         while (node != null) {
-            sb.append(node.val);
+            sb.append(node.val+"->");
             node = node.next;
         }
         sb.append("null");          //最后一个节点的next为null
