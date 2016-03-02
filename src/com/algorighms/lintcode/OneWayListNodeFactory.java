@@ -63,6 +63,7 @@ public class OneWayListNodeFactory {
  * 单向链表节点
  */
 class ListNode {
+
     int val;
     ListNode next;
 
