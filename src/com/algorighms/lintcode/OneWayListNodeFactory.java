@@ -34,18 +34,17 @@ public class OneWayListNodeFactory {
      * @param node
      * @return
      */
-    public static ListNode getTail(ListNode node) {
-        ListNode tail = node;
-        while (tail.next != null) {
-            tail = tail.next;
+    public static ListNode getnode(ListNode node) {
+        while (node.next != null) {
+            node = node.next;
         }
-        return tail;
+        return node;
     }
 
     public static void print(ListNode node) {
         StringBuilder sb = new StringBuilder();
         while (node != null) {
-            sb.append(node.val+"->");
+            sb.append(node.val + "->");
             node = node.next;
         }
         sb.append("null");          //最后一个节点的next为null
