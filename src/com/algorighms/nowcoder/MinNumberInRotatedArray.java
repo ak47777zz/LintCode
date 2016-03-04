@@ -18,5 +18,4 @@ public class MinNumberInRotatedArray {
         }
         return array[0];
     }
-
 }
