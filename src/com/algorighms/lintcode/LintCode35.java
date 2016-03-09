@@ -32,5 +32,27 @@ public class LintCode35 {
         return head;
     }
 
+    /**
+     * 使用指针翻转
+     *
+     * @param head
+     * @return
+     */
+    public ListNode reverse1(ListNode head) {
+        ListNode reverseHead = null;
+        ListNode node = head;
+        ListNode prev = null;
+        while (node != null) {
+            ListNode next = node.next;
+            if (next == null) {
+                reverseHead = node;
+            }
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+        return reverseHead;
+    }
+
 }
 
