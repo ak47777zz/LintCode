@@ -10,14 +10,15 @@ import java.util.ArrayList;
  */
 public class NumbersAppearOnce {
 
-    public void FindNumsAppearOnce(int[] array, int num1[], int num2[]) {
+    public void FindNumAppearOnce(int[] array, int num1[], int num2[]) {
         if (array == null || array.length == 1) {
             num1[0] = 0;
             num2[0] = 0;
+            return;
         }
         int num = 0;
         for (Integer i : array) {
-            num ^= array[i];
+            num ^= i;
         }
         //找到num右侧第一位1  i为右移了几位
         int i = 0;
@@ -30,11 +31,11 @@ public class NumbersAppearOnce {
         }
         ArrayList<Integer> array1 = new ArrayList<>();
         ArrayList<Integer> array2 = new ArrayList<>();
-        for (int j = 0; j < array.length; j++) {
-            if (((array[j] >> i) & 1) == 1) {
-                array1.add(array[j]);
+        for (Integer j : array) {
+            if (((j >> i) & 1) == 1) {
+                array1.add(j);
             } else {
-                array2.add(array[j]);
+                array2.add(j);
             }
         }
         //每组异或运算
